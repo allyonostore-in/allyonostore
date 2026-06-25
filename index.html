@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>allyonostote</title>
+  <style>
+    :root{
+      --bg1:#0b0f17;
+      --bg2:#121826;
+      --card:#171f32;
+      --text:#f5f7fb;
+      --muted:#9fb0d0;
+      --accent:#27d17f;
+      --accent2:#1aa362;
+      --shadow: 0 20px 40px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top, #1a2440 0%, var(--bg1) 35%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+      min-height:100vh;
+    }
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:32px 18px 60px;
+    }
+    .hero{
+      text-align:center;
+      padding:28px 10px 22px;
+    }
+    .badge{
+      display:inline-block;
+      padding:8px 14px;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:999px;
+      color:var(--muted);
+      background:rgba(255,255,255,.04);
+      margin-bottom:16px;
+      font-size:14px;
+      letter-spacing:.3px;
+    }
+    h1{
+      margin:0;
+      font-size:clamp(2rem, 5vw, 3.2rem);
+      line-height:1.05;
+    }
+    .sub{
+      max-width:700px;
+      margin:14px auto 0;
+      color:var(--muted);
+      font-size:1rem;
+      line-height:1.6;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+      gap:22px;
+      margin-top:28px;
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+      backdrop-filter: blur(6px);
+    }
+    .card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(39,209,127,.45);
+      box-shadow:0 24px 48px rgba(0,0,0,.45);
+    }
+    .thumb{
+      aspect-ratio:1/1;
+      width:100%;
+      object-fit:cover;
+      display:block;
+      background:#0e1422;
+    }
+    .content{
+      padding:18px;
+    }
+    .title{
+      font-size:1.35rem;
+      margin:0 0 8px;
+      font-weight:700;
+    }
+    .desc{
+      color:var(--muted);
+      margin:0 0 16px;
+      line-height:1.55;
+      font-size:.98rem;
+    }
+    .btn{
+      display:inline-block;
+      text-decoration:none;
+      color:white;
+      background:linear-gradient(135deg, var(--accent), var(--accent2));
+      padding:12px 18px;
+      border-radius:14px;
+      font-weight:700;
+      letter-spacing:.2px;
+      box-shadow:0 10px 24px rgba(39,209,127,.22);
+    }
+    footer{
+      text-align:center;
+      color:var(--muted);
+      margin-top:34px;
+      font-size:.92rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="badge">allyonostote</div>
+      <h1>Featured App Link</h1>
+      <p class="sub">
+        A clean dark landing page for your app links. Right now it includes the first app card you gave me.
+        When you want, I can add the rest of your links to the same layout.
+      </p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <img class="thumb" src="yono-rummy.jpg" alt="Yono Rummy app icon" />
+        <div class="content">
+          <h2 class="title">Yono Rummy</h2>
+          <p class="desc">Tap below to open the Yono Rummy link.</p>
+          <a class="btn" href="https://yonorummy041.com/?code=VIPT29F45GW&t=1782384777" target="_blank" rel="noopener noreferrer">
+            Open Link
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      Built for allyonostote
+    </footer>
+  </div>
+</body>
+</html>
